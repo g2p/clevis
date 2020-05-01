@@ -88,3 +88,4 @@ bash_bin=$(find_binary "bash")
 copy_exec "${curl_bin}" || die 2 "Unable to copy ${curl_bin} to initrd image"
 copy_exec "${awk_bin}" || die 2 "Unable to copy ${awk_bin} to initrd image"
 copy_exec "${bash_bin}" || die 2 "Unable to copy ${bash_bin} to initrd image"
+copy_file data @sysconfdir@/ssl/certs/ca-certificates.crt || die 2 "Unable to copy certificate bundle to initrd image"
